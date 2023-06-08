@@ -113,7 +113,7 @@
                 as possible
             </p>
             <div class="email-sect">
-                <form method="post">
+                <form id="email-form" method="post">
                     <div class="text-field">
                         <label for="full_name">Full Name</label>
                         <input type="text" name="client-name" id="full_name" required>
@@ -130,11 +130,40 @@
                     </div>
                                         
                     <div class="btns">
-                        <button type="submit" id="send-email">
+                        <button type="submit" id="send-email" onclick=sendMsg>
                             Send Email
                         </button>
                     </div>
                 </form>
+
+                <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+                <script>
+                    const form = document.querySelector(".email-form");
+                    // Function to send email when button is clicked
+                    function sendMsg(e){
+                        const name = document.querySelector("#full_name"),
+                            email = document.querySelector("#email-add"),
+                            msg = document.querySelector("#message");
+                        
+                        
+                        // Send Email Function
+                        Email.send({
+                            SecureToken : "76f6c8e5-8221-4c43-b306-cf7546e87e07",
+                            To : '6mutaibartai58@gmail.com',
+                            From : email.value,
+                            Subject : "A New Message From A Client!",
+                            Body : msg.value
+                        }).then(
+                        message => alert(message)
+                        );
+                    }
+
+                    // Adding the event listener
+                    form.addEventListener("submit", sendMsg);
+                </script> -->
+
+        
             </div>
         </div>
 
@@ -161,7 +190,6 @@
                 </iframe>
             </div>
         </div>
-
     </section>
 
     <!-- Footer Section -->
@@ -240,6 +268,12 @@
             </div>
         </div>
         <hr class="copy">
-        <p id="copyright">Copyright &#169; <a href="mailto:6mutaibartai58@gmail.com" target="_blank">AlphaMax Software International</a> 2023</p>
+        <p id="copyright">
+            All rights reserved 
+            <a href="mailto:6mutaibartai58@gmail.com" target="_blank">
+                Bartai
+            </a> 
+            &#169; 2023.
+        </p>
     </section>
 </body>

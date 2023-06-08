@@ -455,6 +455,32 @@
     min-width: 300px;
 }
 
+#element-container .element .describe #contact{
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#element-container .element .describe #contact a{
+    text-decoration: none;
+    font-size: 1.3em;
+    border-radius: 10px;
+    background-color: cadetblue;
+    padding: 5px 20px;
+    font-weight: 2em;
+    color: #fff;
+    transition: .7s;
+}
+
+#element-container .element .describe #contact a:hover{
+    box-shadow: 5px 9px 15px #888888;
+    background-color: rgb(124, 191, 194);
+}
+
+
 @media only screen and (max-width: 767px){
     #element-container .element{
         margin: 10px;
@@ -728,13 +754,16 @@
 
 #f-div1{
     width: 500px;
-    display: flex;
 }
 
 .footer-cont #f-div1 img{
     width: 220px;
     float: left;
-    margin: 15px;
+    margin-right: 30px;
+}
+
+.footer-cont #f-div1 #d2{
+    margin-top: 45px;
 }
 
 .footer-cont #f-div1 #d2 p{
@@ -841,6 +870,7 @@
 #f-div3 #find-us .locale p{
     font-size: 23px;
 }
+
 #find-us .locale{
     align-items: start;
     width: 100%;
@@ -902,7 +932,32 @@
     text-decoration:underline;
 }
 
-@media only screen and (max-width: 1290px){
+
+/* Media Query For Very Small Screen Sized Phones */
+@media only screen and (max-width: 480px){
+    .footer-cont #f-div1 img{
+        width: 100%;
+        float: none;
+    }
+
+    #f-div3{
+        width: 98%;
+    }
+
+    #f-div3 #find-us .locale p{
+        font-size: 16px;
+    }
+
+    #find-us .locale p i{
+        font-size: 20px;
+    }
+
+    .footer #copyright{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1290px){
     .footer #find-us{
         background-color: #d4d4d4;
         width: 90%;
