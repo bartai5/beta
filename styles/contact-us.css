@@ -378,6 +378,18 @@
     background-color: rgb(230, 4, 4);
 }
 
+/* Media Query For Very Small Screen Sized Phones */
+@media only screen and (max-width: 479px){
+    #banner p{
+        font-size: 2em;
+
+    }
+}
+
+@media only screen  and (min-width: 480) and (max-width:767) {
+    
+}
+
 /* Email section */
 #email-us{
     margin: 0;
@@ -415,7 +427,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 500px;
+    width: 100%;
     margin-top: 30px;
 }
 
@@ -425,7 +437,7 @@
 }
 
 .text-field input{
-    width: 100%;
+    width: 90%;
     padding: 0 5px;
     height: 40px;
     font-size: 20px;
@@ -438,7 +450,7 @@
 
 .text-field textarea{
     resize: none;
-    width: 100%;
+    width: 90%;
     padding: 10px 5px;
     height: 100px;
     font-size: 20px;
@@ -493,6 +505,7 @@
     background-color: #00922c;
 }
 
+/* Contact Information */
 #email-us .find-us{
     justify-content: center;
     align-items: center;
@@ -545,7 +558,8 @@
 #email-us .find-us #map{
     width: 650px;
     height: 350px;
-    margin-left: 30px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #333;
 }
 
@@ -554,33 +568,73 @@
     height: 100%;
 }
 
-@media only screen and (max-width: 1290px){
-    #banner p{
-        font-size: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+@media only screen and (max-width: 479px){
+    #email-us .get-in-touch{
+        width: 100%;
+    }
+
+    #email-us .get-in-touch h2, 
+    .find-us h2{
+        font-size: 1.4em;
+    }
+
+    #email-us .get-in-touch p{
+        width: 100%;
+        font-size: 1.2em;
+        padding: 2px 5px 2px 5px;
     }
 
     #email-us .find-us .links{
         display: block;
-        justify-content: center;
-        align-items: center;
+        font-size: 1em;
     }
 
     #email-us .find-us .links #p3{
-        font-size: 20px;
+        font-size: 1.2em;
     }
 
     #email-us .find-us #map{
-        width: 280px;
-        height: 300px;
-        margin-left: auto;
-        margin-right: auto;
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width:889px) {
+    #email-us .get-in-touch{
+        width: 90%;
     }
 
-    #email-us .get-in-touch{
-        width: 300px;
+    #email-us .get-in-touch h2, 
+    .find-us h2{
+        font-size: 1.7em;
+    }
+
+    #email-us .get-in-touch p{
+        width: 90%;
+        font-size: 1.2em;
+        padding: 2px 5px 2px 5px;
+    }
+
+    #email-us .get-in-touch form{
+        width: 90%;
+    }
+
+    #email-us .find-us #map{
+        width: 95%;
+    }
+
+    #email-us .find-us .links{
+        display: block;
+        font-size: 1em;
+    }
+
+    #email-us .find-us .links #p3{
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (min-width:890px) and (max-width: 1023px){
+    #email-us .find-us .links #p3{
+        font-size: 20px;
     }
 
     #email-us .get-in-touch h2{
@@ -588,14 +642,46 @@
     }
 
     #email-us .get-in-touch p{
-        width: 300px;
+        width: 90%;
     }
 
     #email-us .get-in-touch{
-        width: 290px;
+        width: 45%;
     }
 
     .email-sect{
+        width: 100%;
+    }
+
+    #email-us .find-us{
+        width: 45%;
+    }
+
+    #email-us .find-us .links{
+        display: block;
+        font-size: 1em;
+    }
+
+    #email-us .find-us #map{
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width:1024px){
+    #email-us .get-in-touch{
+        width: 45%;
+    }
+
+    #email-us .find-us{
+        width: 45%;
+    }
+
+    #email-us .find-us .links{
+        display: block;
+        font-size: 1em;
+    }
+
+    #email-us .find-us #map{
         width: 100%;
     }
 }
@@ -853,7 +939,7 @@
         justify-content: center;
         align-items: center;
         width: 450px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     .f-div1 #d1 img{
@@ -863,7 +949,7 @@
     .footer-cont #f-div1 #d2 p{
         text-align: center;
         line-height: 1.5;
-        font-size: 20px;
+        font-size: 1.1em;
         width: 100%;
         display: inline;
     }

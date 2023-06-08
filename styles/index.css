@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 /* Navigation Bar */
@@ -312,7 +313,7 @@
 }
 
 .company-name h1{
-    font-family: 'Bruno Ace', cursive;
+    font-family: 'Bruno Ace', 'Times New Roman', Times, serif, cursive;
     font-size: 100px;
 }
 
