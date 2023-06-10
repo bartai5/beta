@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Caveat:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="styles/index.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 <body>
     <!-- Navigation Bar section -->
@@ -323,14 +324,17 @@
                             <br>
                             `;
                         Email.send({
-                            SecureToken: "4639795f-2d95-468d-9ea8-dbbe23529809",
+                            SecureToken: "27e27fa9-f0bb-40bf-991e-a1916b409b87",
                             To: "betageoconsultants@gmail.com",
-                            From: "kipkuruijapheth11@gmail.com",
+                            From: "betageoconsultants@gmail.com",
                             Subject: "New Message From " + full_name.value,
                             Body: ebody,
                         }).then(
                             function openPopup(){
                                 popup.classList.add("open-popup");
+                                document.getElementById("name").value = "";
+                                document.getElementById("email-add").value = "";
+                                document.getElementById("message").value = "";
                             }
                         );
                     })

@@ -167,14 +167,17 @@
                             <br>
                             `;
                         Email.send({
-                            SecureToken: "4639795f-2d95-468d-9ea8-dbbe23529809",
+                            SecureToken: "27e27fa9-f0bb-40bf-991e-a1916b409b87",
                             To: "betageoconsultants@gmail.com",
-                            From: "kipkuruijapheth11@gmail.com",
+                            From: "betageoconsultants@gmail.com",
                             Subject: "New Message From " + full_name.value,
                             Body: ebody,
                         }).then(
                             function openPopup(){
                                 popup.classList.add("open-popup");
+                                document.getElementById("name").value = "";
+                                document.getElementById("email-add").value = "";
+                                document.getElementById("message").value = "";
                             }
                         );
                     })
