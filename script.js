@@ -97,3 +97,5 @@ var galleryImages = document.querySelectorAll('.gallery-image');
       var imageSrc = galleryImages[currentImageIndex].getAttribute('src');
       popupImage.setAttribute('src', imageSrc);
     });
+
+    

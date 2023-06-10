@@ -1050,7 +1050,7 @@
     align-items: center;
 }
 
-.btns #send-email{
+.btns #button{
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
@@ -1066,18 +1066,67 @@
     transition: .5s;
 }
 
-.btns #send-email i{
+.btns #button i{
     transition: .5s;
     color: #d1d1d1;
 }
 
-.btns #send-email:hover i{
+.btns #button:hover i{
     color: #e9b119;
 }
 
-.btns #send-email:hover{
+.btns #button:hover{
     box-shadow: 5px 9px 15px #888888;
     background-color: #00922c;
+}
+
+/* Popup details */
+.popup{
+    width: 300px;
+    background-color: #fff;
+    border-radius: 6px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+.popup img{
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.popup #name{
+    font-size: 38px;
+    font-weight: 50px;
+    margin: 20px 0 10px;
+}
+.popup h3{
+    text-align: center;
+    width: 95%;
+}
+.popup .close-btn{
+    width: 95%;
+    margin-top: 30px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .contact-sec .container .other-methods{

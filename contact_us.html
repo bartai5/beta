@@ -11,6 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Caveat:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="styles/contact-us.css">
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>  <!--SMTPJS link -->
+    <script src="script.js"></script>
 </head>
 <body>
     <!-- Navigation Bar section -->
@@ -113,15 +116,15 @@
                 as possible
             </p>
             <div class="email-sect">
-                <form id="email-form" method="post">
+                <form id="email-form" method="post" class="form">
                     <div class="text-field">
                         <label for="full_name">Full Name</label>
-                        <input type="text" name="client-name" id="full_name" required>
+                        <input type="text" name="name" id="name" required>
                     </div>
 
                     <div class="text-field">
                         <label for="email-add">Email Address</label>
-                        <input type="email" name="email-add" id="email-add" required>
+                        <input type="email" name="email" id="email-add" required>
                     </div>
 
                     <div class="text-field">
@@ -130,40 +133,52 @@
                     </div>
                                         
                     <div class="btns">
-                        <button type="submit" id="send-email" onclick=sendMsg>
+                        <button type="submit" id="button" class="btn" onclick="openPopup()">
                             Send Email
                         </button>
                     </div>
+                    <div class="popup" id="popup">
+                        <img src="images/icon.png">
+                        <h2 id="name">Thank You!</h2>
+                        <h3>We Will Get Back To You As Soon As Possible.</h3>
+                        <button type="button" class="close-btn" onclick="closePopup()">OK</button>
+                    </div>
                 </form>
 
-                <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
-
                 <script>
-                    const form = document.querySelector(".email-form");
-                    // Function to send email when button is clicked
-                    function sendMsg(e){
-                        const name = document.querySelector("#full_name"),
-                            email = document.querySelector("#email-add"),
-                            msg = document.querySelector("#message");
-                        
-                        
-                        // Send Email Function
-                        Email.send({
-                            SecureToken : "76f6c8e5-8221-4c43-b306-cf7546e87e07",
-                            To : '6mutaibartai58@gmail.com',
-                            From : email.value,
-                            Subject : "A New Message From A Client!",
-                            Body : msg.value
-                        }).then(
-                        message => alert(message)
-                        );
+                    // Script for sending email to the client
+                    const full_name = document.getElementById("name");
+                    const email = document.getElementById("email-add");
+                    const message = document.getElementById("message");
+                    const submit = document.getElementsByClassName("form")[0];
+                    let popup = document.getElementById("popup");
+
+                    function closePopup(){
+                        popup.classList.remove("open-popup")
                     }
-
-                    // Adding the event listener
-                    form.addEventListener("submit", sendMsg);
-                </script> -->
-
-        
+                    submit.addEventListener("submit", (e) =>{
+                        e.preventDefault();
+                        let ebody = `
+                            <b>Name: </b>${full_name.value}
+                            <br>
+                            <b>Email Address: </b>${email.value}
+                            <br>
+                            <b>Message: </b>${message.value}
+                            <br>
+                            `;
+                        Email.send({
+                            SecureToken: "4639795f-2d95-468d-9ea8-dbbe23529809",
+                            To: "betageoconsultants@gmail.com",
+                            From: "kipkuruijapheth11@gmail.com",
+                            Subject: "New Message From " + full_name.value,
+                            Body: ebody,
+                        }).then(
+                            function openPopup(){
+                                popup.classList.add("open-popup");
+                            }
+                        );
+                    })
+                </script>
             </div>
         </div>
 
