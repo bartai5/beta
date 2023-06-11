@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 /* Navigation Bar */
@@ -726,6 +727,41 @@
         font-size: 1.2em;
         line-height: 1.6;
     }
+}
+
+/* Scroll to top Button */
+#scroll-up{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    position: fixed;
+    bottom: 5px;
+    right: 7px;
+    cursor: pointer;
+    transition: all 1s ease 0s;
+}
+
+#scroll-up:hover{
+    width: 35px;
+    height: 35px;
+}
+
+#scroll-up:hover .container-scroll{
+    background: rgb(53, 58, 65);
+}
+#scroll-up .container-scroll{
+    width: 100%;
+    height: 100%;
+    background: rgb(21, 26, 32);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+#scroll-up .container-scroll i{
+    font-size: 30px;
+    color: #f2f2f2;
 }
 
 /* Footer Section */
