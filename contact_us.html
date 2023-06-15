@@ -8,9 +8,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Caveat:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="styles/contact-us.css">
-
     <script src="https://smtpjs.com/v3/smtp.js"></script>  <!--SMTPJS link -->
     <script src="script.js"></script>
+
+    <script src="chatbot.js" defer></script>
+    <link rel="stylesheet" href="styles/chatbot.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
     <!-- Meta Tags-->
     <meta charset="UTF-8">
@@ -219,6 +222,32 @@
             <div id="map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.626827452446!2d36.90954352814794!3d-1.2248268802156193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f15c49f82fdc5%3A0x5db61e3309d888a9!2sBeta%20Geo-Consultants!5e0!3m2!1sen!2ske!4v1685112989155!5m2!1sen!2ske" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot Section -->
+    <section id="chatbot">
+        <button class="chatbot-toggler">
+            <span><i class='bx bx-chat'></i></span>
+            <span><i class='bx bx-x'></i></span>
+        </button>
+        <div class="chatbot">
+            <header>
+                <h2>Support | Beta Geo-Consultants.</h2>
+                <span><i class='bx bx-x' id="close-btn"></i></span>
+            </header>
+            <div class="container">
+                <ul class="chatbox">
+                    <li class="chat incoming">
+                        <span class="material-symbols-outlines"><img src="images/Logo.webp" alt="Image Icon Of Beta Geo Logo"></span>
+                        <p>Hi there! <br>How can I help your today?</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="chat-input">
+                <textarea placeholder="Type Your Message..." required></textarea>
+                <span id="send-btn" class="material-symbols-outlined"><i class='bx bx-send'></i></span>
             </div>
         </div>
     </section>

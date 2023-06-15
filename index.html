@@ -10,6 +10,10 @@
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <link rel="stylesheet" href="styles/index.css">
 
+    <script src="chatbot.js" defer></script>
+    <link rel="stylesheet" href="styles/chatbot.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
     <!-- Meta Tags-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -399,6 +403,32 @@
                 </div>
                 
 
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot Section -->
+    <section id="chatbot">
+        <button class="chatbot-toggler">
+            <span><i class='bx bx-chat'></i></span>
+            <span><i class='bx bx-x'></i></span>
+        </button>
+        <div class="chatbot">
+            <header>
+                <h2>Support | Beta Geo-Consultants.</h2>
+                <span><i class='bx bx-x' id="close-btn"></i></span>
+            </header>
+            <div class="container">
+                <ul class="chatbox">
+                    <li class="chat incoming">
+                        <span class="material-symbols-outlines"><img src="images/Logo.webp" alt="Image Icon Of Beta Geo Logo"></span>
+                        <p>Hi there! <br>How can I help your today?</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="chat-input">
+                <textarea placeholder="Type Your Message..." required></textarea>
+                <span id="send-btn" class="material-symbols-outlined"><i class='bx bx-send'></i></span>
             </div>
         </div>
     </section>
