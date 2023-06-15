@@ -178,6 +178,10 @@
         border-radius: 0;
     }
 
+    .chatbot .container{
+        overflow-y: scroll;
+    }
+
     .chatbot .chatbox{
         width: 90%;
     }
